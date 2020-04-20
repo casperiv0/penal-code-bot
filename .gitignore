@@ -1,0 +1,4 @@
+commands/nick.js
+node_modules
+.env
+.vscode
