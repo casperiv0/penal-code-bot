@@ -5,9 +5,7 @@ const bot = new Discord.Client({ disableEveryone: true });
 const fs = require("fs");
 bot.commands = new Discord.Collection();
 require("dotenv").config();
-const { prefix, statuses } = require("./config.json");
-const token = process.env.BOT_TOKEN;
-
+const { prefix, statuses, token } = require("./config.json");
 
 bot.once("reconnecting", () => {
   bot.channels.get("646695061458911243").send("**Reconnecting**");
@@ -35,12 +33,12 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(chalk.redBright("Connecting to server."));
   console.log(chalk.redBright("Setting up bot."));
-  console.log(chalk.green("Succsesfully connected!"));
+  console.log(chalk.green("Successfully connected!"));
 
   console.log(chalk.blue(`${bot.user.username} is online!`));
 
   // Change the bot status
-  setInterval(function() {
+  setInterval(function () {
     let status = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(status, {
       type: "PLAYING"
@@ -55,12 +53,12 @@ bot.on("message", async message => {
     .slice(prefix.length)
     .trim()
     .split(/ +/g);
-    
+
 
   // Make the arguments lowercase
   let cmd = args.shift().toLowerCase();
   let commandFile;
-  
+
   // Check if the command exists
   if (bot.commands.has(cmd)) {
     commandFile = bot.commands.get(cmd);
@@ -72,7 +70,7 @@ bot.on("message", async message => {
   } catch (err) {
     console.log(err);
   }
-  
+
 });
 
 
