@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message) => {
   try {
-    message.delete().catch(O_o => {});
+    message.delete();
     const embed = new Discord.RichEmbed()
       .setTitle("10 Codes, Status")
       .addField(

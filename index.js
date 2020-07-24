@@ -1,19 +1,9 @@
-const chalk = require("chalk");
-const config = require("./config.json");
-const Discord = require("discord.js");
-const bot = new Discord.Client({ disableEveryone: true });
+const { Client, Collection } = require("discord.js");
+const bot = new Client({ disableEveryone: true });
 const fs = require("fs");
-bot.commands = new Discord.Collection();
-require("dotenv").config();
+bot.commands = new Collection();
 const { prefix, statuses, token } = require("./config.json");
 
-bot.once("reconnecting", () => {
-  bot.channels.get("646695061458911243").send("**Reconnecting**");
-});
-
-bot.once("disconnect", () => {
-  bot.channels.get("646695061458911243").send("**Disconnected**");
-});
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.log(err);
@@ -23,7 +13,7 @@ fs.readdir("./commands/", (err, files) => {
     return;
   }
 
-  jsfile.forEach((f, i) => {
+  jsfile.forEach(f => {
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
@@ -31,11 +21,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 bot.on("ready", async () => {
-  console.log(chalk.redBright("Connecting to server."));
-  console.log(chalk.redBright("Setting up bot."));
-  console.log(chalk.green("Successfully connected!"));
-
-  console.log(chalk.blue(`${bot.user.username} is online!`));
+  console.log(`${bot.user.username} is online!`);
 
   // Change the bot status
   setInterval(function () {
@@ -48,7 +34,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
   if (message.author.bot || !message.content.startsWith(prefix)) return;
-  let messageArraty = message.content.split(/ +/);
+
   const args = message.content
     .slice(prefix.length)
     .trim()
@@ -56,17 +42,17 @@ bot.on("message", async message => {
 
 
   // Make the arguments lowercase
-  let cmd = args.shift().toLowerCase();
-  let commandFile;
+  const cmd = args.shift().toLowerCase();
+  let command;
 
   // Check if the command exists
   if (bot.commands.has(cmd)) {
-    commandFile = bot.commands.get(cmd);
+    command = bot.commands.get(cmd);
   } else {
-    return message.channel.send("Command doesn't exist")
+    return message.channel.send("Command doesn't exist");
   }
   try {
-    commandFile.run(bot, message, args);
+    command.run(bot, message, args);
   } catch (err) {
     console.log(err);
   }

@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
-const prefix = require("../config.json");
 
 module.exports.run = async (bot, message, args) => {
   try {
-    message.delete().catch(O_o => {});
+    message.delete();
 
     let noargs = new Discord.RichEmbed()
       .setTitle("Penal Codes")
@@ -57,7 +56,7 @@ module.exports.run = async (bot, message, args) => {
         "```(12)01.Mistake-of-Fact, (12)02.Involuntary-Intoxication, (12)03.Private-Defense-Self-Defense-Castle-Doctrine-And-Defense-Of-Others, (12)04.Necessity, (12)06.Duress, (12)07.Parole-Exclusions, (12)08.Suspicion-Policy, (12)09.Officer-Discretion, (12)10.Good-Samaritan-Clause, (12)11.Imprisonment-Punishment-Criteria, (12)12.Maximum-Imprisonment, (12)13.Wiretapping-CCTV-Videotaping-Policy, (12)14.Police-Exigency-Hot-Pursuit-Policy, (12)15.Probable-Cause-Plain-View-Policy, (12)16.Criminal-Fines, (12)17.Repeat-Offender-Clause, (12)18.Immunity```"
       )
       .addField("**Usage:**", "E.G. !penal (1)01.Intimidation")
-      .addField("**Prefix**", `!`)
+      .addField("**Prefix**", "!")
       .addField(
         "**Original link:**",
         "https://docs.google.com/document/d/1MhLSUncPfMTGKDytn4xbjam3o6NYRkgOFc2KC_szcXo/"
@@ -343,6 +342,7 @@ module.exports.run = async (bot, message, args) => {
           "If there's any error, faults or typos, DM CasperTheGhost#4546"
         )
         .setTimestamp();
+      message.channel.send(assault3);
     } else if (args[0] == "(2)09.Theft") {
       let assault3 = new Discord.RichEmbed()
         .setTitle("(2)09. Theft ")
@@ -1559,7 +1559,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("(11)00. Limitations")
         .setColor("#0000FF")
         .setDescription(
-          '**1)** No individual may be fined more than $25,000 in the course of a single road law incident in charges from Title 11. Road Law.\n**2)** No individual may receive more than three driver warnings, amounting to a single license revocation, per road law incident.\n **3)** No more than one of each code entry in Title 11. Road Law may be issued on a driver per road law incident.\n **4)** A road law incident is defined as the moment an officer engages a person until the conclusion of that engagement or situation.\n**5)** A peace officer is entitled to an exterior inspection of a vehicle, as well as verification of all paperwork, licenses, registrations, and other documentation during a traffic stop. A full vehicle inspection is permitted with a search warrant or appropriate probable cause.\n **6)** Checkpoints, border controls, and other police operations on public roads must have a documented purpose, documented record of operations, and exist temporarily in response to (or in preparation to) a particular incident, holiday, etc.\n **7)** A peace officer is only entitled to identify the driver of a vehicle when performing a traffic stop or other vehicle checkpoint operation, unless the passenger falls under a reasonable suspicion to be identified, such as matching an APB description.\n\n **EXAMPLE:** If an officer requests a driver to pull over, and the incident evolves into a pursuit, it is considered part of the same "road law incident" as it is a single, uninterrupted engagement. If the individual escapes or the pursuit is canceled, it is considered a conclusion to a single "road law incident." This means, for example, if a pursuit ends, and the suspect is discovered again, new charges may be issued if they continue to evade police.'
+          "**1)** No individual may be fined more than $25,000 in the course of a single road law incident in charges from Title 11. Road Law.\n**2)** No individual may receive more than three driver warnings, amounting to a single license revocation, per road law incident.\n **3)** No more than one of each code entry in Title 11. Road Law may be issued on a driver per road law incident.\n **4)** A road law incident is defined as the moment an officer engages a person until the conclusion of that engagement or situation.\n**5)** A peace officer is entitled to an exterior inspection of a vehicle, as well as verification of all paperwork, licenses, registrations, and other documentation during a traffic stop. A full vehicle inspection is permitted with a search warrant or appropriate probable cause.\n **6)** Checkpoints, border controls, and other police operations on public roads must have a documented purpose, documented record of operations, and exist temporarily in response to (or in preparation to) a particular incident, holiday, etc.\n **7)** A peace officer is only entitled to identify the driver of a vehicle when performing a traffic stop or other vehicle checkpoint operation, unless the passenger falls under a reasonable suspicion to be identified, such as matching an APB description.\n\n **EXAMPLE:** If an officer requests a driver to pull over, and the incident evolves into a pursuit, it is considered part of the same \"road law incident\" as it is a single, uninterrupted engagement. If the individual escapes or the pursuit is canceled, it is considered a conclusion to a single \"road law incident.\" This means, for example, if a pursuit ends, and the suspect is discovered again, new charges may be issued if they continue to evade police."
         )
         .setFooter(
           "If there's any error, faults or typos, DM CasperTheGhost#4546"
