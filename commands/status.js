@@ -1,13 +1,15 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message) => {
-  try {
-    message.delete();
-    const embed = new Discord.RichEmbed()
-      .setTitle("10 Codes, Status")
-      .addField(
-        "**Service Status**",
-        `
+module.exports = {
+  name: "status",
+  async run(bot, message) {
+    try {
+      message.delete();
+      const embed = new Discord.MessageEmbed()
+        .setTitle("10 Codes, Status")
+        .addField(
+          "**Service Status**",
+          `
       **10-5:** Meal Break
       **10-7:** Out of Service,
       **10-8:** In service			  		
@@ -25,10 +27,10 @@ module.exports.run = async (bot, message) => {
 **Signal 11:** Running Radar	 		
 **Signal 41:** 10-41 | 10-8 
 `
-      )
-      .addField(
-        "**Scenes:**",
-        `
+        )
+        .addField(
+          "**Scenes:**",
+          `
     **10-10:** Fights in Progress
     **10-11:** Traffic Stop		
     **10-13:** Shots Fired				
@@ -48,10 +50,10 @@ module.exports.run = async (bot, message) => {
     **Code 5:** Felony Stop				
     **Signal 60:** Drugs
                     `
-      )
-      .addField(
-        "**Radio Comms:**",
-        `
+        )
+        .addField(
+          "**Radio Comms:**",
+          `
 **10-1:** Frequency Change
 **10-2:** Radio Check
 **10-3:** Stop Transmitting 
@@ -68,10 +70,10 @@ module.exports.run = async (bot, message) => {
 **Code 4:** Under control 
 **Signal 37:** Meet at Location
 **Signal 100:** Emergency traffic`
-      )
-      .addField(
-        "**Requests:**",
-        `
+        )
+        .addField(
+          "**Requests:**",
+          `
     **10-27:** Drivers License Check 
     **10-28:** Plate Check
     **10-29:** Warrant Check
@@ -80,10 +82,10 @@ module.exports.run = async (bot, message) => {
     **10-52:** EMS service
     **10-53:** Fire Dept. Service
     **10-71:** Supervisor needed`
-      )
-      .addField(
-        "**Subject Status:**",
-        `
+        )
+        .addField(
+          "**Subject Status:**",
+          `
 **10-0:** Disappeared
 **10-30:** Wanted Person
 **10-55:** Intoxicated Driver
@@ -93,16 +95,12 @@ module.exports.run = async (bot, message) => {
 **10-31:** Not wanted, No warrants		
 **10-56:** Intoxicated Pedestrian
 **10-61:** Armed with a knife `
-      )
-      .setColor("0000FF")
-      .setFooter(message.author.username, message.author.displayAvatarURL);
-    message.channel.send(embed);
-  } catch (err) {
-    message.channel.send("Sorry, Something went wrong!");
-
-  }
-};
-
-module.exports.help = {
-  name: "status-codes"
+        )
+        .setColor("0000FF")
+        .setFooter(message.author.username, message.author.displayAvatarURL);
+      message.channel.send(embed);
+    } catch (err) {
+      message.channel.send("Sorry, Something went wrong!");
+    }
+  },
 };

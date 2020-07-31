@@ -1,11 +1,12 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
-  try {
+module.exports = {
+  name: "title",
+  async run(bot, message, args) {
     if (!args)
       return message.channel.send("Please provide a valid title, **1 -> 12**");
     else if (args == "1") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle("**Title 1.** Crimes Against The Person (PC 1-01 to PC 1-13)")
         .setColor("0000FF")
         .setTimestamp()
@@ -14,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "2") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 2.**  Crimes Against Property And Criminal Profiteering (PC 2-01 to PC 2-17)"
         )
@@ -25,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "3") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 3.** Crimes Against Public Decency (PC 3-01 to PC 3-10)"
         )
@@ -36,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "4") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 4.** Crimes Against Public Justice (PC 4-01 to PC 4-24)"
         )
@@ -47,7 +48,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "5") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 5.** Crimes Against Public Peace (PC 5-01 to PC 5-06) "
         )
@@ -58,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "6") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 6.** Of Crimes Against Public Health And Safety (PC 6-01 to PC 6-11) "
         )
@@ -69,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "7") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 7.** Crimes Against State Dependents (PC 7-01 to PC 7-05)"
         )
@@ -80,7 +81,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "8") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle("**Title 8.** Vehicular Offenses (PC 8-00 to PC 8-09)")
         .setColor("0000FF")
         .setTimestamp()
@@ -89,7 +90,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "9") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 9.** Control Of Deadly Weapons And Equipment  (PC 9-01 to PC 9-13)"
         )
@@ -100,7 +101,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "10") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle(
           "**Title 10.** Sentencing Enhancements (PC 10-00 to PC 10-07)"
         )
@@ -111,7 +112,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "11") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle("**Title 11.** Road Law (PC 11-00 to PC 11-23)")
         .setColor("0000FF")
         .setTimestamp()
@@ -120,7 +121,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "12") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle("**Title 12.** Code Policy (PC 12-01 to PC 12-18)")
         .setColor("0000FF")
         .setTimestamp()
@@ -129,7 +130,7 @@ module.exports.run = async (bot, message, args) => {
         );
       message.channel.send(embed1);
     } else if (args == "(11)01.") {
-      let embed1 = new Discord.RichEmbed()
+      let embed1 = new Discord.MessageEmbed()
         .setTitle("**(11)01. Speeding Violation**")
         .setColor("0000FF")
         .setTimestamp()
@@ -140,12 +141,9 @@ module.exports.run = async (bot, message, args) => {
     } else {
       message.channel.send("Please Provide a valid title, **1 -> 12**");
     }
-  } catch (err) {
-    message.channel.send("Sorry, Something went wrong!");
-
   }
 };
 module.exports.help = {
-  name: "title"
+  name: "title",
   //   aliases: ["title", "tit"]
 };

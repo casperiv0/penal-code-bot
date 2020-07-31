@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
-  try {
+module.exports = {
+  name: "penals",
+  async run(bot, message, args) {
     message.delete();
 
-    let noargs = new Discord.RichEmbed()
+    let noargs = new Discord.MessageEmbed()
       .setTitle("Penal Codes")
       .setColor("#0000FF")
       .addField(
@@ -67,7 +68,7 @@ module.exports.run = async (bot, message, args) => {
       .setTimestamp();
     if (!args[0]) message.channel.send(noargs);
     if (args[0] == "(1)01.Intimidation") {
-      let Intimidation = new Discord.RichEmbed()
+      let Intimidation = new Discord.MessageEmbed()
         .setTitle("(1)01.Intimidation")
         .setColor("#0000FF")
         .setDescription(
@@ -79,7 +80,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(Intimidation);
     } else if (args[0] == "(1)02.Assault") {
-      let assault = new Discord.RichEmbed()
+      let assault = new Discord.MessageEmbed()
         .setTitle("(1)02. Assault")
         .setColor("#0000FF")
         .setDescription(
@@ -91,7 +92,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault);
     } else if (args[0] == "(1)03.Assault-On-A-Peace-Officer") {
-      let assault2 = new Discord.RichEmbed()
+      let assault2 = new Discord.MessageEmbed()
         .setTitle("(1)02. Assault On A Peace Officer")
         .setColor("#0000FF")
         .setDescription(
@@ -103,7 +104,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault2);
     } else if (args[0] == "(1)04.Assault-With-A-Deadly-Weapon") {
-      let assault2 = new Discord.RichEmbed()
+      let assault2 = new Discord.MessageEmbed()
         .setTitle("(1)02. Assault WIth A Deadly Weapon")
         .setColor("#0000FF")
         .setDescription(
@@ -115,7 +116,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault2);
     } else if (args[0] == "(1)05.Mutual-Combat") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)05. Mutual Combat")
         .setColor("#0000FF")
         .setDescription(
@@ -127,7 +128,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)06.Battery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)06. Battery")
         .setColor("#0000FF")
         .setDescription(
@@ -139,7 +140,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)07.Aggravated-Battery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)07. Aggravated Battery")
         .setColor("#0000FF")
         .setDescription(
@@ -151,7 +152,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)08.Attempted-Murder") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)08. Attempted Murder")
         .setColor("#0000FF")
         .setDescription(
@@ -163,7 +164,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)09.Manslaughter") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)09. Manslaughter")
         .setColor("#0000FF")
         .setDescription(
@@ -175,7 +176,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)10.Murder") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)10. Murder")
         .setColor("#0000FF")
         .setDescription(
@@ -187,7 +188,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)11.False-Imprisonment") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)11. False Imprisonment")
         .setColor("#0000FF")
         .setDescription(
@@ -199,7 +200,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)12.Kidnapping") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)12. Kidnapping")
         .setColor("#0000FF")
         .setDescription(
@@ -211,7 +212,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)13.Mayhem") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)13. Mayhem")
         .setColor("#0000FF")
         .setDescription(
@@ -223,7 +224,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)14.Vehicular-Murder") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)14. Vehicular Murder ")
         .setColor("#0000FF")
         .setDescription(
@@ -235,7 +236,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(1)15.Racketeering") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(1)15. Racketeering")
         .setColor("#0000FF")
         .setDescription(
@@ -248,7 +249,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       // TITLE 2 >
     } else if (args[0] == "(2)01.Arson") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)01. Arson")
         .setColor("#0000FF")
         .setDescription(
@@ -260,7 +261,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)02.Trespassing") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)02. Trespassing ")
         .setColor("#0000FF")
         .setDescription(
@@ -272,7 +273,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)03.Trespassing-within-a-Restricted-Zone") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)03. Trespassing within a Restricted Zone")
         .setColor("#0000FF")
         .setDescription(
@@ -284,7 +285,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)04.Burglary") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)04. Burglary")
         .setColor("#0000FF")
         .setDescription(
@@ -296,7 +297,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)05.Possession-Of-Burglary-Tools") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)05. Possession Of Burglary Tools")
         .setColor("#0000FF")
         .setDescription(
@@ -308,7 +309,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)06.Robbery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)06. Robbery")
         .setColor("#0000FF")
         .setDescription(
@@ -320,7 +321,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)07.Armed-Robbery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)07. Armed Robbery")
         .setColor("#0000FF")
         .setDescription(
@@ -332,7 +333,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)08.Petty-Theft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)08. Petty Theft")
         .setColor("#0000FF")
         .setDescription(
@@ -344,7 +345,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)09.Theft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)09. Theft ")
         .setColor("#0000FF")
         .setDescription(
@@ -356,7 +357,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)10.Grand-Theft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)10. Grand Theft")
         .setColor("#0000FF")
         .setDescription(
@@ -368,7 +369,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)11.Grand-Theft-Auto") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)11. Grand Theft Auto")
         .setColor("#0000FF")
         .setDescription(
@@ -380,7 +381,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)12.Grand-Theft-Of-A-Firearm") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)12. Grand Theft Of A Firearm")
         .setColor("#0000FF")
         .setDescription(
@@ -392,7 +393,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)13.Receiving-Stolen-Property") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)13. Receiving Stolen Property")
         .setColor("#0000FF")
         .setDescription(
@@ -404,7 +405,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)14.Extortion") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)14. Extortion")
         .setColor("#0000FF")
         .setDescription(
@@ -416,7 +417,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)15.Forgery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)15. Forgery ")
         .setColor("#0000FF")
         .setDescription(
@@ -428,7 +429,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)16.Fraud") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)16. Fraud")
         .setColor("#0000FF")
         .setDescription(
@@ -440,7 +441,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(2)17.Vandalism") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(2)17. Vandalism")
         .setColor("#0000FF")
         .setDescription(
@@ -453,7 +454,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 3 >
     } else if (args[0] == "(3)01.Lewd-Or-Dissolute-Conduct-In-Public") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)01. Lewd Or Dissolute Conduct In Public")
         .setColor("#0000FF")
         .setDescription(
@@ -465,7 +466,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)02.Indecent-Exposure") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)02. Indecent Exposure")
         .setColor("#0000FF")
         .setDescription(
@@ -477,7 +478,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)03.Prostitution") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)03. Prostitution")
         .setColor("#0000FF")
         .setDescription(
@@ -489,7 +490,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)04.Solicitation-of-Prostitution") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)04. Solicitation of Prostitution")
         .setColor("#0000FF")
         .setDescription(
@@ -501,7 +502,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)05.Pandering-Pimping") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)05. Pandering - Pimping")
         .setColor("#0000FF")
         .setDescription(
@@ -513,7 +514,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)06.Sexual-Assault") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)06. Sexual Assault")
         .setColor("#0000FF")
         .setDescription(
@@ -525,7 +526,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)07.Sexual-Battery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)07. Sexual Battery")
         .setColor("#0000FF")
         .setDescription(
@@ -537,7 +538,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)08.Rape") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)08. Rape")
         .setColor("#0000FF")
         .setDescription(
@@ -549,7 +550,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)09.Statutory-Rape") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)09. Statutory Rape")
         .setColor("#0000FF")
         .setDescription(
@@ -561,7 +562,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(3)10.Stalking") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(3)10. Stalking")
         .setColor("#0000FF")
         .setDescription(
@@ -574,7 +575,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 4
     } else if (args[0] == "(4)01.Bribery") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)01. Bribery ")
         .setColor("#0000FF")
         .setDescription(
@@ -586,7 +587,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)02.Failure-To-Pay-A-Fine") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)02. Failure To Pay A Fine")
         .setColor("#0000FF")
         .setDescription(
@@ -598,7 +599,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)03.Contempt-of-Court") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)03. Contempt of Court")
         .setColor("#0000FF")
         .setDescription(
@@ -610,7 +611,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)04.Subpoena-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)04. Subpoena Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -622,7 +623,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)05.Dissuading-A-Witness-Or-Victim") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)05. Dissuading A Witness Or Victim")
         .setColor("#0000FF")
         .setDescription(
@@ -634,7 +635,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)06.False-Information-To-A-Government-Employee") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)06. False Information To A Government Employee")
         .setColor("#0000FF")
         .setDescription(
@@ -646,7 +647,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)07.Filing-A-False-Complaint") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)07. Filing A False Complaint")
         .setColor("#0000FF")
         .setDescription(
@@ -658,7 +659,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)08.Perjury") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)08. Perjury")
         .setColor("#0000FF")
         .setDescription(
@@ -670,7 +671,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)09.Failure-To-Identify-To-A-Peace-Officer") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)09. Failure To Identify To A Peace Officer")
         .setColor("#0000FF")
         .setDescription(
@@ -682,7 +683,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)10.Impersonation-Of-A-Government-Employee") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)10. Impersonation Of A Government Employee")
         .setColor("#0000FF")
         .setDescription(
@@ -694,7 +695,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)11.Impersonation-of-an-Individual") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)11. Impersonation of an Individual")
         .setColor("#0000FF")
         .setDescription(
@@ -706,7 +707,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)12.Obstruction-Of-A-Government-Employee") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)12. Obstruction Of A Government Employee")
         .setColor("#0000FF")
         .setDescription(
@@ -718,7 +719,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)13.Resisting-A-Peace-Officer") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)13. Resisting A Peace Officer")
         .setColor("#0000FF")
         .setDescription(
@@ -730,7 +731,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)14.Escape-From-Custody") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)14. Escape From Custody")
         .setColor("#0000FF")
         .setDescription(
@@ -742,7 +743,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)15.Escape") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)15. Escape")
         .setColor("#0000FF")
         .setDescription(
@@ -754,7 +755,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)16.Prisoner-Breakout") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)16. Prisoner Breakout")
         .setColor("#0000FF")
         .setDescription(
@@ -766,7 +767,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)17.Human-Trafficking") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)17. Human Trafficking")
         .setColor("#0000FF")
         .setDescription(
@@ -778,7 +779,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)18.Misuse-Of-A-Government-Hotline") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)18. Misuse Of A Government Hotline")
         .setColor("#0000FF")
         .setDescription(
@@ -790,7 +791,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)19.Tampering-With-Evidence") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)19. Tampering With Evidence")
         .setColor("#0000FF")
         .setDescription(
@@ -802,7 +803,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)20.Introduction-Of-Contraband") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)20. Introduction Of Contraband")
         .setColor("#0000FF")
         .setDescription(
@@ -814,7 +815,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)21.Violation-Of-Parole-Or-Probation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)21. Violation Of Parole Or Probation")
         .setColor("#0000FF")
         .setDescription(
@@ -826,7 +827,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)22.Voter-Fraud-Voter-Pandering") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)22. Voter Fraud - Voter Pandering")
         .setColor("#0000FF")
         .setDescription(
@@ -838,7 +839,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)23.Corruption-Of-Public-Duty") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)23. Corruption Of Public Duty")
         .setColor("#0000FF")
         .setDescription(
@@ -850,7 +851,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)24.Corruption-Of-Public-Office") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)24. Corruption Of Public Office")
         .setColor("#0000FF")
         .setDescription(
@@ -862,7 +863,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(4)25.Contempt-of-Senate") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(4)25. Contempt of Senate")
         .setColor("#0000FF")
         .setDescription(
@@ -875,7 +876,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 5
     } else if (args[0] == "(5)01.Disturbing-The-Peace") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(5)01. Disturbing The Peace")
         .setColor("#0000FF")
         .setDescription(
@@ -887,7 +888,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(5)02.Unlawful-Assembly") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(5)02. Unlawful Assembly")
         .setColor("#0000FF")
         .setDescription(
@@ -899,7 +900,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(5)03.Incitement-To-Riot") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(5)03. Incitement To Riot ")
         .setColor("#0000FF")
         .setDescription(
@@ -911,7 +912,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(5)04.Vigilantism") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(5)04. Vigilantism ")
         .setColor("#0000FF")
         .setDescription(
@@ -923,7 +924,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(5)05.Terrorism") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(5)05. Terrorism")
         .setColor("#0000FF")
         .setDescription(
@@ -936,7 +937,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 6
     } else if (args[0] == "(6)01.Possession-Of-A-Controlled-Substance") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)01. Possession Of A Controlled Substance")
         .setColor("#0000FF")
         .setDescription(
@@ -951,7 +952,7 @@ module.exports.run = async (bot, message, args) => {
       args[0] ==
       "(6)02.Possession-Of-A-Controlled-Substance-With-Intent-To-Sell"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle(
           "(6)02. Possession Of A Controlled Substance With Intent To Sell"
         )
@@ -965,7 +966,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)03.Possession-Of-Drug-Paraphernalia") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)03. Possession Of Drug Paraphernalia")
         .setColor("#0000FF")
         .setDescription(
@@ -979,7 +980,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(6)04.Maintaining-A-Place-For-The-Purpose-Of-Distribution"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)04. Maintaining A Place For The Purpose Of Distribution")
         .setColor("#0000FF")
         .setDescription(
@@ -991,7 +992,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)05.Manufacture-Of-A-Controlled-Substance") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)05.Manufacture-Of-A-Controlled-Substance")
         .setColor("#0000FF")
         .setDescription(
@@ -1003,7 +1004,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)06.Sale-Of-A-Controlled-Substance") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)06. Sale Of A Controlled Substance")
         .setColor("#0000FF")
         .setDescription(
@@ -1015,7 +1016,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)07.Possession-Of-An-Open-Container") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)07. Possession Of An Open Container")
         .setColor("#0000FF")
         .setDescription(
@@ -1027,7 +1028,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)08.Public-Intoxication") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)08. Public Intoxication")
         .setColor("#0000FF")
         .setDescription(
@@ -1041,7 +1042,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(6)09.Under-The-Influence-Of-A-Controlled-Substance"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)09. Under The Influence Of A Controlled Substance")
         .setColor("#0000FF")
         .setDescription(
@@ -1053,7 +1054,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)10.Facial-Obstruction-While-Committing-A-Crime") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)10. Facial Obstruction While Committing A Crime")
         .setColor("#0000FF")
         .setDescription(
@@ -1065,7 +1066,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(6)11.Possession-of-Marijuana") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(6)11. Possession of Marijuana")
         .setColor("#0000FF")
         .setDescription(
@@ -1078,7 +1079,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 7
     } else if (args[0] == "(7)01.Animal-Abuse-Cruelty") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(7)01. Animal Abuse - Cruelty")
         .setColor("#0000FF")
         .setDescription(
@@ -1090,7 +1091,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(7)02.Child-Abuse") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(7)02. Child Abuse")
         .setColor("#0000FF")
         .setDescription(
@@ -1102,7 +1103,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(7)03.Sale-of-Alcohol-To-A-Minor") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(7)03. Sale of Alcohol To A Minor")
         .setColor("#0000FF")
         .setDescription(
@@ -1114,7 +1115,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(7)04.Minor-Alcohol-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(7)04. Minor Alcohol Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1126,7 +1127,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(7)05.Possession-Of-Child-Pornography") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(7)05. Possession Of Child Pornography")
         .setColor("#0000FF")
         .setDescription(
@@ -1138,7 +1139,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)00.Limitations") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)00. Limitations")
         .setColor("#0000FF")
         .setDescription(
@@ -1150,7 +1151,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)01.-Driving-With-A-Suspended-License") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)01. Driving With A Suspended License")
         .setColor("#0000FF")
         .setDescription(
@@ -1162,7 +1163,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)02.Driving-Without-A-License") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)02. Driving Without A License")
         .setColor("#0000FF")
         .setDescription(
@@ -1174,7 +1175,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)02.Evading-A-Peace-Officer") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)02. Evading A Peace Officer")
         .setColor("#0000FF")
         .setDescription(
@@ -1188,7 +1189,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(8)03.Evading-A-Peace-Officer-High-Performance-Vehicle"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)03. Evading A Peace Officer — High Performance Vehicle")
         .setColor("#0000FF")
         .setDescription(
@@ -1200,7 +1201,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)04.Evading-A-Peace-Officer-Oversized-Vehicle") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)04. Evading A Peace Officer — Oversized Vehicle")
         .setColor("#0000FF")
         .setDescription(
@@ -1212,7 +1213,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)05.Evading-A-Peace-Officer-Naval-Vessel") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)05. Evading A Peace Officer — Naval Vessel")
         .setColor("#0000FF")
         .setDescription(
@@ -1224,7 +1225,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)06.Evading-A-Peace-Officer-Aircraft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)06. Evading A Peace Officer — Aircraft")
         .setColor("#0000FF")
         .setDescription(
@@ -1236,7 +1237,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)07.Flying-Without-A-Pilot's-License") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)07. Flying Without A Pilot's License")
         .setColor("#0000FF")
         .setDescription(
@@ -1248,7 +1249,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)08.Hit-And-Run") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)08. Hit And Run")
         .setColor("#0000FF")
         .setDescription(
@@ -1260,7 +1261,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)09.Hit-And-Run-Involving-Property-Damage") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)09. Hit And Run Involving Property Damage ")
         .setColor("#0000FF")
         .setDescription(
@@ -1272,7 +1273,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(8)10.Reckless-Operation-Of-An-Aircraft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(8)10. Reckless Operation Of An Aircraft")
         .setColor("#0000FF")
         .setDescription(
@@ -1285,7 +1286,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //START PENAL 09 HERE:
     } else if (args[0] == "(9)01.Possession-Of-An-Illegal-Blade") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)01. Possession Of An Illegal Blade")
         .setColor("#0000FF")
         .setDescription(
@@ -1297,7 +1298,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)02.Possession-Of-An-Unlicensed-Firearm") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)02. Possession Of An Unlicensed Firearm")
         .setColor("#0000FF")
         .setDescription(
@@ -1309,7 +1310,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)03.Possession-Of-An-Illegal-Firearm") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)03. Possession Of An Illegal Firearm")
         .setColor("#0000FF")
         .setDescription(
@@ -1321,7 +1322,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)04.Possession-Of-An-Assault-Weapon") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)04. Possession Of An Assault Weapon")
         .setColor("#0000FF")
         .setDescription(
@@ -1333,7 +1334,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)05.Unlicensed-Distribution-Of-A-Weapon") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)05. Unlicensed Distribution Of A Weapon")
         .setColor("#0000FF")
         .setDescription(
@@ -1345,7 +1346,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)06.Possession-Of-An-Explosive-Device") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)06. Possession Of An Explosive Device")
         .setColor("#0000FF")
         .setDescription(
@@ -1359,7 +1360,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(9)07.Manufacture-or-Possession-of-an-Improvised-Device"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)07. Manufacture or Possession of an Improvised Device")
         .setColor("#0000FF")
         .setDescription(
@@ -1371,7 +1372,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)08.Possession-of-Weapons-With-Intent-To-Sell") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)08. Possession of Weapons With Intent To Sell")
         .setColor("#0000FF")
         .setDescription(
@@ -1385,7 +1386,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(9)09.Possession-Of-Explosive-Devices-With-Intent-To-Sell"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)09. Possession Of Explosive Devices With Intent To Sell")
         .setColor("#0000FF")
         .setDescription(
@@ -1397,7 +1398,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)10.Brandishing-A-Firearm") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)10. Brandishing A Firearm")
         .setColor("#0000FF")
         .setDescription(
@@ -1409,7 +1410,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)11.Weapons-Discharge-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)11. Weapons Discharge Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1421,7 +1422,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)12.Drive-By-Shooting") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)12. Drive-By Shooting")
         .setColor("#0000FF")
         .setDescription(
@@ -1433,7 +1434,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(9)13.CCW-PF-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(9)13. CCW - PF Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1446,7 +1447,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 10
     } else if (args[0] == "(10)00.Exception") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)00. Exception ")
         .setColor("#0000FF")
         .setDescription(
@@ -1458,7 +1459,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)01.Attempt") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)01. Attempt ")
         .setColor("#0000FF")
         .setDescription(
@@ -1470,7 +1471,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)02.Conspiracy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)02. Conspiracy")
         .setColor("#0000FF")
         .setDescription(
@@ -1482,7 +1483,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)03.Soliciting") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)03. Soliciting")
         .setColor("#0000FF")
         .setDescription(
@@ -1494,7 +1495,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)04.Government-Worker-Clause") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)04. Government Worker Clause")
         .setColor("#0000FF")
         .setDescription(
@@ -1506,7 +1507,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)05.Plea-Bargaining-Police-Compliance-Clause") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)05. Plea Bargaining - Police Compliance Clause")
         .setColor("#0000FF")
         .setDescription(
@@ -1518,7 +1519,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)06.Three-strikes-Vehicle-Policy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)06. Three-strikes Vehicle Policy")
         .setColor("#0000FF")
         .setDescription(
@@ -1530,7 +1531,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)07.Criminal-Accomplice-Clause") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)07. Criminal Accomplice Clause ")
         .setColor("#0000FF")
         .setDescription(
@@ -1542,7 +1543,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(10)08.Accessory-After-the-Fact") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(10)08. Accessory After the Fact ")
         .setColor("#0000FF")
         .setDescription(
@@ -1555,11 +1556,11 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 11 >
     } else if (args[0] == "(11)00.Limitations") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)00. Limitations")
         .setColor("#0000FF")
         .setDescription(
-          "**1)** No individual may be fined more than $25,000 in the course of a single road law incident in charges from Title 11. Road Law.\n**2)** No individual may receive more than three driver warnings, amounting to a single license revocation, per road law incident.\n **3)** No more than one of each code entry in Title 11. Road Law may be issued on a driver per road law incident.\n **4)** A road law incident is defined as the moment an officer engages a person until the conclusion of that engagement or situation.\n**5)** A peace officer is entitled to an exterior inspection of a vehicle, as well as verification of all paperwork, licenses, registrations, and other documentation during a traffic stop. A full vehicle inspection is permitted with a search warrant or appropriate probable cause.\n **6)** Checkpoints, border controls, and other police operations on public roads must have a documented purpose, documented record of operations, and exist temporarily in response to (or in preparation to) a particular incident, holiday, etc.\n **7)** A peace officer is only entitled to identify the driver of a vehicle when performing a traffic stop or other vehicle checkpoint operation, unless the passenger falls under a reasonable suspicion to be identified, such as matching an APB description.\n\n **EXAMPLE:** If an officer requests a driver to pull over, and the incident evolves into a pursuit, it is considered part of the same \"road law incident\" as it is a single, uninterrupted engagement. If the individual escapes or the pursuit is canceled, it is considered a conclusion to a single \"road law incident.\" This means, for example, if a pursuit ends, and the suspect is discovered again, new charges may be issued if they continue to evade police."
+          '**1)** No individual may be fined more than $25,000 in the course of a single road law incident in charges from Title 11. Road Law.\n**2)** No individual may receive more than three driver warnings, amounting to a single license revocation, per road law incident.\n **3)** No more than one of each code entry in Title 11. Road Law may be issued on a driver per road law incident.\n **4)** A road law incident is defined as the moment an officer engages a person until the conclusion of that engagement or situation.\n**5)** A peace officer is entitled to an exterior inspection of a vehicle, as well as verification of all paperwork, licenses, registrations, and other documentation during a traffic stop. A full vehicle inspection is permitted with a search warrant or appropriate probable cause.\n **6)** Checkpoints, border controls, and other police operations on public roads must have a documented purpose, documented record of operations, and exist temporarily in response to (or in preparation to) a particular incident, holiday, etc.\n **7)** A peace officer is only entitled to identify the driver of a vehicle when performing a traffic stop or other vehicle checkpoint operation, unless the passenger falls under a reasonable suspicion to be identified, such as matching an APB description.\n\n **EXAMPLE:** If an officer requests a driver to pull over, and the incident evolves into a pursuit, it is considered part of the same "road law incident" as it is a single, uninterrupted engagement. If the individual escapes or the pursuit is canceled, it is considered a conclusion to a single "road law incident." This means, for example, if a pursuit ends, and the suspect is discovered again, new charges may be issued if they continue to evade police.'
         )
         .setFooter(
           "If there's any error, faults or typos, DM CasperTheGhost#4546"
@@ -1567,7 +1568,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)01.Speeding-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)01. Speeding Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1581,7 +1582,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(11)02.Failure-To-Abide-To-A-Traffic-Control-Device"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)02. Failure To Abide To A Traffic Control Device")
         .setColor("#0000FF")
         .setDescription(
@@ -1593,7 +1594,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)03.Yield-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)03. Yield Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1605,7 +1606,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)04.Parking-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)04. Parking Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1637,7 +1638,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)05.Reckless-Driving") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)05. Reckless Driving")
         .setColor("#0000FF")
         .setDescription(
@@ -1658,7 +1659,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)06.Vehicular-Endangerment") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)06. Vehicular Endangerment")
         .setColor("#0000FF")
         .setDescription(
@@ -1671,7 +1672,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)07.Vehicular-Noise-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)07. Vehicular Noise Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1684,7 +1685,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)08.Illegal-Nitrous-Oxide-Possession") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)08. Illegal Nitrous Oxide Possession")
         .setColor("#0000FF")
         .setDescription(
@@ -1696,7 +1697,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)09.Illegal-Usage-Of-Hydraulics") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)09. Illegal Usage Of Hydraulics")
         .setColor("#0000FF")
         .setDescription(
@@ -1708,7 +1709,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)10.Driving-While-Impaired-(DWI)") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)10. Driving While Impaired (DWI)")
         .setColor("#0000FF")
         .setDescription(
@@ -1720,7 +1721,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)11.Driving-Under-The-Influence-(DUI)") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)11. Driving Under The Influence (DUI)")
         .setColor("#0000FF")
         .setDescription(
@@ -1732,7 +1733,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)12.Registration-Violation") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)12. Registration Violation")
         .setColor("#0000FF")
         .setDescription(
@@ -1744,7 +1745,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)13.Unsafe-Usage-Of-A-Bicycle") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)13. Unsafe Usage Of A Bicycle")
         .setColor("#0000FF")
         .setDescription(
@@ -1756,7 +1757,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)14.Street-Racing") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)14. Street Racing")
         .setColor("#0000FF")
         .setDescription(
@@ -1768,7 +1769,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)15.Driving-without-a-Valid-License") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)15. Driving without a Valid License")
         .setColor("#0000FF")
         .setDescription(
@@ -1780,7 +1781,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)16.Jaywalking") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)16. Jaywalking")
         .setColor("#0000FF")
         .setDescription(
@@ -1792,7 +1793,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)17.Illegal-Parking-Of-An-Aircraft") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)17. Illegal Parking Of An Aircraft")
         .setColor("#0000FF")
         .setDescription(
@@ -1804,7 +1805,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)18.Tinted-Windows") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)18. Tinted Windows")
         .setColor("#0000FF")
         .setDescription(
@@ -1816,7 +1817,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)19.Illegal-Color-of-Underglow") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
 
         .setTitle("(11)19. Illegal Color of Underglow")
         .setColor("#0000FF")
@@ -1831,7 +1832,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (
       args[0] == "(11)20.Unlawful-Transport-of-Persons-in-a-Cargo-Area"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)20. Unlawful Transport of Persons in a Cargo Area")
         .setColor("#0000FF")
         .setDescription(
@@ -1843,7 +1844,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)21.Fire-Hydrant-Parking-Restriction") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)21. Fire Hydrant Parking Restriction")
         .setColor("#0000FF")
         .setDescription(
@@ -1855,7 +1856,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)22.Broken-Headlights-Tail-lights") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)22. Broken Headlights-Tail lights")
         .setColor("#0000FF")
         .setDescription(
@@ -1867,7 +1868,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(11)23.Unregistered-Vehicle") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(11)23. Unregistered Vehicle")
         .setColor("#0000FF")
         .setDescription(
@@ -1880,7 +1881,7 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(assault3);
       //TITLE 12
     } else if (args[0] == "(12)01.Mistake-of-Fact") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)01. Mistake of Fact")
         .setColor("#0000FF")
         .setDescription(
@@ -1892,7 +1893,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)02.Involuntary-Intoxication") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)02. Involuntary Intoxication")
         .setColor("#0000FF")
         .setDescription(
@@ -1907,7 +1908,7 @@ module.exports.run = async (bot, message, args) => {
       args[0] ==
       "(12)03.Private-Defense-Self-Defense-Castle-Doctrine-And-Defense-Of-Others"
     ) {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle(
           "(12)03. Private Defense, Self Defense, Castle Doctrine, And Defense Of Others"
         )
@@ -1921,7 +1922,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)04.Necessity") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)04. Necessity")
         .setColor("#0000FF")
         .setDescription(
@@ -1933,7 +1934,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)05.Entrapment") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)05. Entrapment")
         .setColor("#0000FF")
         .setDescription(
@@ -1945,7 +1946,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)06.Duress") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)06. Duress")
         .setColor("#0000FF")
         .setDescription(
@@ -1957,7 +1958,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)07.Parole-Exclusions") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)07. Parole Exclusions")
         .setColor("#0000FF")
         .setDescription(
@@ -1969,7 +1970,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)08.Suspicion-Policy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)08. Suspicion Policy")
         .setColor("#0000FF")
         .setDescription(
@@ -1981,7 +1982,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)09.Officer-Discretion") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)09. Officer Discretion")
         .setColor("#0000FF")
         .setDescription(
@@ -1993,7 +1994,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)10.Good-Samaritan-Clause") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)10. Good Samaritan Clause")
         .setColor("#0000FF")
         .setDescription(
@@ -2005,7 +2006,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)11.Imprisonment-Punishment-Criteria") {
-      let embed = new Discord.RichEmbed()
+      let embed = new Discord.MessageEmbed()
         .setTitle("(12)11. Imprisonment & Punishment Criteria")
         .setColor("#0000FF")
         .setDescription(
@@ -2017,7 +2018,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(embed);
     } else if (args[0] == "(12)12.Maximum-Imprisonment") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)12. Maximum Imprisonment ")
         .setColor("#0000FF")
         .setDescription(
@@ -2029,7 +2030,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)13.Wiretapping-CCTV-Videotaping-Policy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)13. Wiretapping, CCTV & Videotaping Policy")
         .setColor("#0000FF")
         .setDescription(
@@ -2041,7 +2042,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)14.Police-Exigency-Hot-Pursuit-Policy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("((12)14. Police Exigency & Hot Pursuit Policy")
         .setColor("#0000FF")
         .setDescription(
@@ -2053,7 +2054,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)15.Probable-Cause-Plain-View-Policy") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)15. Probable Cause & Plain View Policy")
         .setColor("#0000FF")
         .setDescription(
@@ -2065,7 +2066,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)16.Criminal-Fines") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)16. Criminal Fines ")
         .setColor("#0000FF")
         .setDescription(
@@ -2077,7 +2078,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)17.Repeat-Offender-Clause") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)17. Repeat Offender Clause")
         .setColor("#0000FF")
         .setDescription(
@@ -2089,7 +2090,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0] == "(12)18.Immunity") {
-      let assault3 = new Discord.RichEmbed()
+      let assault3 = new Discord.MessageEmbed()
         .setTitle("(12)18. Immunity")
         .setColor("#0000FF")
         .setDescription(
@@ -2101,7 +2102,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       message.channel.send(assault3);
     } else if (args[0]) {
-      const embed0 = new Discord.RichEmbed()
+      const embed0 = new Discord.MessageEmbed()
         .setTitle("Error, Invalid penal code")
         .setDescription(
           "Invalid penal code, please use **!penal** to see all the penal codes."
@@ -2113,17 +2114,8 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp();
       return message.channel.send(embed0);
     }
-  } catch (err) {
-    message.channel.send("Sorry, Something went wrong!");
-
   }
 };
-
-module.exports.help = {
-  name: "penal"
-};
-
-
 // TITLE 1
 // (1)01.Intimidation
 // (1)02.Assault
